@@ -1,0 +1,4 @@
+include ':data'
+include ':app:domain'
+include ':app', ':domain', ':data'
+rootProject.name = "Mes cryptos"
