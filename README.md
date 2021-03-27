@@ -1,3 +1,3 @@
 # base_clean_archi_2021
 
-Clean archi - MVP - coroutines
+Clean archi - MVVM - coroutines
