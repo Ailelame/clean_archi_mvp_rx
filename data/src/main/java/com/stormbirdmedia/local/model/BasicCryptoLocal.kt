@@ -11,15 +11,4 @@ data class BasicCryptoLocal(
     val name: String,
     val symbol: String,
     val tradingSymbol: String
-){
-//    companion object {
-        fun toApi(): BasicCryptoApi{
-            return BasicCryptoApi(
-                id,
-                name,
-                symbol,
-                tradingSymbol
-            )
-        }
-//    }
-}
+)

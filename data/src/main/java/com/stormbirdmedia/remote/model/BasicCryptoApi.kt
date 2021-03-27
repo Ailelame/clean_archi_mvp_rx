@@ -2,6 +2,7 @@ package com.stormbirdmedia.remote.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import com.stormbirdmedia.local.model.BasicCryptoLocal
 
 @JsonClass(generateAdapter = true)
 data class BasicCryptoApi(
@@ -13,4 +14,13 @@ data class BasicCryptoApi(
     val symbol: String,
     @Json(name = "tradingSymbol")
     val tradingSymbol: String
-)
+) {
+    fun toLocal(): BasicCryptoLocal{
+        return BasicCryptoLocal(
+            id,
+            name,
+            symbol,
+            tradingSymbol
+        )
+    }
+}

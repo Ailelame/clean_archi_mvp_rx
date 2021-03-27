@@ -5,15 +5,13 @@ import com.stormbirdmedia.remote.model.BasicCryptoApi
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.core.SingleSource
 
-class CryptoManagerImpl(val endpoint: CryptoEndpoint, val basicCryptoDao : BasicCryptoDao) : CryptoManager {
+class CryptoManagerImpl(private val endpoint: CryptoEndpoint, private val basicCryptoDao: BasicCryptoDao) : CryptoManager {
 
     override fun getCryptoCurrencies(): Single<List<BasicCryptoApi>> {
-        return basicCryptoDao.getAllCryptos()
-            .flatMap {
-                (if(it.isEmpty())
-                    endpoint.getCryptoCurrencies() // TODO save the object locally
-                else
-                    Single.just(it.map { it.toApi() }))
+        return endpoint.getCryptoCurrencies()
+            .map {
+                basicCryptoDao.insert(it.map { it.toLocal() })
+                it
             }
     }
 }
