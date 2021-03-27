@@ -1,6 +1,6 @@
 package com.stormbirdmedia.mescryptos.application
 
-import com.stormbirdmedia.data.remote.manager.CryptoEndpoint
+import com.stormbirdmedia.remote.manager.CryptoEndpoint
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit

@@ -1,7 +1,7 @@
 package com.stormbirdmedia.mescryptos.application
 
 import android.app.Application
-import com.stormbirdmedia.data.di.dataModule
+import com.stormbirdmedia.di.dataModule
 import com.stormbirdmedia.domain.di.domainModule
 import com.stormbirdmedia.mescryptos.BuildConfig
 import org.koin.android.ext.koin.androidContext

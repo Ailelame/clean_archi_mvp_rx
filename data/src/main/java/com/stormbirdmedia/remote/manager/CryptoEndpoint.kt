@@ -1,6 +1,6 @@
-package com.stormbirdmedia.data.remote.manager
+package com.stormbirdmedia.remote.manager
 
-import com.stormbirdmedia.data.remote.model.BasicCryptoApi
+import com.stormbirdmedia.remote.model.BasicCryptoApi
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 

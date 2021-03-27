@@ -1,6 +1,6 @@
 package com.stormbirdmedia.domain.mapper
 
-import com.stormbirdmedia.data.remote.model.BasicCryptoApi
+import com.stormbirdmedia.remote.model.BasicCryptoApi
 import com.stormbirdmedia.domain.model.BasicCrypto
 
 class BasicCryptoMapper {
